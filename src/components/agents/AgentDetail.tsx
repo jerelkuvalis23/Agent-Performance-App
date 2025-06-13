@@ -1,3 +1,10 @@
+import React, { useState, useEffect } from 'react';
+import { Save } from 'lucide-react';
+import { getCamps } from '../../utils/campUtils';
+import { updateAgentLeads } from '../../utils/agentUtils';
+import { Camp } from '../../types';
+import { toast } from 'react-hot-toast';
+
 // Update the leads input section to include camp selection
 const [selectedCamp, setSelectedCamp] = useState('');
 const [camps, setCamps] = useState<Camp[]>([]);
